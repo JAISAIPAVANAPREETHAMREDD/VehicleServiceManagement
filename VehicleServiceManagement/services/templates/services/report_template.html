@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Report</title>
+</head>
+<body>
+    <h1>Service Report</h1>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Vehicle</th>
+            <th>Service Date</th>
+            <th>Description</th>
+        </tr>
+        {% for service in services %}
+            <tr>
+                <td>{{ service.vehicle }}</td>
+                <td>{{ service.service_date }}</td>
+                <td>{{ service.description }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

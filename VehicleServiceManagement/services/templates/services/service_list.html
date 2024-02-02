@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Service List for {{ services.0.vehicle }}</h2>
+    <ul>
+        {% for service in services %}
+            <li>
+                <strong>Date:</strong> {{ service.service_date }}<br>
+                <strong>Description:</strong> {{ service.description }}
+                <a href="{% url 'edit_service' service.id %}">Edit</a>
+                <a href="{% url 'delete_service' service.id %}">Delete</a>
+                <a href="{% url 'edit_service' service.id %}">Edit</a>
+                <a href="{% url 'delete_service' service.id %}">Delete</a>
+                <a href="{% url 'edit_service' service.id %}">Edit</a>
+                <a href="{% url 'delete_service' service.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
